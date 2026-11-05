@@ -60,7 +60,7 @@ export function MirrorGallery() {
         Little moments, beautiful memories, and my favorite person.
       </p>
 
-      <div className="mt-8 columns-2 gap-2 sm:mt-12 sm:gap-4 md:columns-3 lg:columns-4">
+      <div className="mt-8 grid grid-cols-2 gap-2 sm:mt-12 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
         {photos.map((p, i) => (
           <motion.button
             key={i}
@@ -68,7 +68,7 @@ export function MirrorGallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 + i * 0.08 }}
             onClick={() => setOpen(i)}
-            className="group mb-2 block w-full break-inside-avoid text-left sm:mb-4"
+            className="group block w-full text-left"
           >
             <div
               className={`neon-card ${heights[i % 4]} overflow-hidden shadow-xl transition-all duration-500 group-hover:-translate-y-1 group-hover:glow-rose`}
